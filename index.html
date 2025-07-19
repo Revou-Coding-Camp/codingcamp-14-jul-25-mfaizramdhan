@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="profile.html">Our Profile</a>
+            <a href="#">Portfolio</a>
+            <a href="#message-us">Message Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <div class="welcome-text">
+                <h1>Hi <span id="welcome-name"></span>, Welcome To Our Website</h1>
+                <p>Ini adalah website latihan pertama yang dibuat dengan santai <i class="fas fa-smile"></i></p>
+            </div>
+            <div class="banner-image"></div>
+        </section>
+
+        <section class="headquarters-section">
+            <h2><i class="fas fa-city"></i> Our Headquarters</h2>
+            <div class="hq-cards">
+                <div class="card">
+                    <i class="fas fa-building-columns"></i>
+                    <h3>Jakarta</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mountain-city"></i>
+                    <h3>Bandung</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-water"></i>
+                    <h3>Surabaya</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-monument"></i>
+                    <h3>Semarang</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="message-us" class="message-us-section">
+            <h2><i class="fas fa-envelope"></i> Message Us</h2>
+            <div class="form-container">
+                <form id="message-form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="e.g., Budi Santoso">
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal-lahir">Tanggal Lahir</label>
+                        <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div class="radio-group">
+                            <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-Laki">
+                            <label for="laki-laki"><i class="fas fa-mars"></i> Laki-Laki</label>
+                            <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan">
+                            <label for="perempuan"><i class="fas fa-venus"></i> Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" name="pesan" rows="5" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                    </div>
+                    <div id="error-message" class="error"></div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="form-output">
+                    <h3>Your Submission:</h3>
+                    <p><strong><i class="fas fa-clock"></i> Time:</strong> <span id="current-time">-</span></p>
+                    <p><strong><i class="fas fa-user"></i> Nama:</strong> <span id="output-nama">-</span></p>
+                    <p><strong><i class="fas fa-calendar-alt"></i> Tgl. Lahir:</strong> <span id="output-tanggal-lahir">-</span></p>
+                    <p><strong><i class="fas fa-venus-mars"></i> Gender:</strong> <span id="output-jenis-kelamin">-</span></p>
+                    <p><strong><i class="fas fa-comment-dots"></i> Pesan:</strong> <span id="output-pesan">-</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with <i class="fas fa-smile"></i> by Faiz</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
